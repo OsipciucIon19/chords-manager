@@ -1,6 +1,6 @@
 
 export default function Search() {
     return (
-        <input placeholder="search tabs" />
+        <input className="searchInput" placeholder="search tabs" />
     )
 }

@@ -10,13 +10,15 @@ function App() {
         <Router>
             <Navbar/>
             <div className={"mainContainer"} style={{display: "flex"}}>
-                <div className="leftContainer" style={{width: 300}}>
-                    <LeftContainer />
+                <div className="leftContainer">
+                    <LeftContainer/>
                 </div>
-                <Routes>
-                    <Route path="/about" element={<About/>}/>
-                    <Route path="/" element={<Home/>}/>
-                </Routes>
+                <div className="rightContainer">
+                    <Routes>
+                        <Route path="/about" element={<About/>}/>
+                        <Route path="/" element={<Home/>}/>
+                    </Routes>
+                </div>
             </div>
         </Router>
     )

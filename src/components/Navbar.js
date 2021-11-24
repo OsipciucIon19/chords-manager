@@ -5,17 +5,17 @@ import {Link} from "react-router-dom";
 export default function Navbar() {
     return (
         <nav>
-            <div>Logo</div>
-                <ul>
+            <div className="navbarBrand">Chords Manager</div>
+                <ul className="navbarLinks">
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link className="link" to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/about">About</Link>
+                        <Link className="link" to="/about">About</Link>
                     </li>
                 </ul>
             <Search/>
-            <img src={logo} alt="ico" width={'50px'}/>
+            <img src={logo} className="accountImage" alt="ico" width={'50px'}/>
         </nav>
     )
 }
