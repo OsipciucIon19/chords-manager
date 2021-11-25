@@ -1,6 +1,7 @@
+import {SearchStyled} from "./styled/Search.styled";
 
 export default function Search() {
     return (
-        <input className="searchInput" placeholder="search tabs" />
+        <SearchStyled className="searchInput" placeholder="search tabs" />
     )
 }

@@ -1,26 +1,20 @@
-import './App.css';
 import Navbar from "./components/Navbar";
-import Home from "./components/Home"
-import About from "./components/About"
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {BrowserRouter as Router} from "react-router-dom";
 import LeftContainer from "./components/LeftContainer";
+import {AppStyled} from "./components/styled/App.styled";
+import RightContainer from "./components/RightContainer";
 
 function App() {
     return (
-        <Router>
-            <Navbar/>
-            <div className={"mainContainer"} style={{display: "flex"}}>
-                <div className="leftContainer">
+        <AppStyled>
+            <Router>
+                <Navbar/>
+                <div className={"mainContainer"} style={{display: "flex"}}>
                     <LeftContainer/>
+                    <RightContainer/>
                 </div>
-                <div className="rightContainer">
-                    <Routes>
-                        <Route path="/about" element={<About/>}/>
-                        <Route path="/" element={<Home/>}/>
-                    </Routes>
-                </div>
-            </div>
-        </Router>
+            </Router>
+        </AppStyled>
     )
 }
 

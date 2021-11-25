@@ -1,6 +1,8 @@
+import {LeftContainerStyled} from "./styled/LeftContainer.styled";
+
 export default function LeftContainer() {
     return (
-        <>
+        <LeftContainerStyled>
             <div className="popularArtists">
                 <h2>Popular Artists</h2>
                 <ul>
@@ -17,6 +19,6 @@ export default function LeftContainer() {
                     <li>Song3</li>
                 </ul>
             </div>
-        </>
+        </LeftContainerStyled>
     )
 }
