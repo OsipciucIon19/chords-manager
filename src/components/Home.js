@@ -1,10 +1,10 @@
 import TextEditor from "./TextEditor";
 
-export default function Home() {
+export default function Home({addChords}) {
     return (
         <div className="home" style={{display: "block"}}>
             <h1>Add new song chords</h1>
-            <form>
+            <form onSubmit={(event => event.preventDefault())}>
                 <label htmlFor="name">
                     <div>Song Name</div>
                     <input type="text" id="name"/>
@@ -14,7 +14,7 @@ export default function Home() {
                     <input type="text" id="artist"/>
                 </label>
                 <TextEditor/>
-                <button>Submit</button>
+                <button onClick={addChords}>Submit</button>
             </form>
         </div>
     )
